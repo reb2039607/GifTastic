@@ -1,0 +1,27 @@
+body {
+    font: 18px arial, sans-serif;
+    background: #eee;
+}
+
+.search-item {
+    float: left;
+    padding: 10px;
+}
+
+form {
+    width: 30%;
+    float: right;
+}
+
+button,
+input[type="submit"] {
+    background: teal;
+    color: #ffffff;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-size: 18px;
+    margin: 0 10px 10px 0;
+    cursor: pointer; /*  I didn't know about this! */
+    box-shadow: 2px 2px 3px #bbb;
+}

@@ -33,11 +33,23 @@ $(document).on("click", ".searchButton", function () {
                 image.attr("data-still", still);
                 image.attr("data-animated", animated);
                 image.attr("data-state", "still");
+                image.addClass("searchImage");
                 searchDiv.append(p);
                 searchDiv.append(image);
                 $("#searches").prepend(searchDiv);
             }
         })
+})
+
+$(document).on("click", ".searchImage", function(){
+    let state = $(this).attr("data-state");
+    if(state == "still"){
+        $(this).attr("src", $(this).data("animated"));
+        $(this).attr("data-state", "animated");
+    } else {
+        $(this).attr("src", $(this).data("still"));
+        $(this).attr("data-state", "still");
+    }
 })
 
 $("#addSearch").on("click", function(){
